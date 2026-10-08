@@ -1149,22 +1149,35 @@ if (window.innerWidth <= 768) {
 
             let running = true;
 
-            // Người dùng chạm/vuốt → dừng tự động
+            // ================================
+            // NGƯỜI DÙNG LƯỚT / CHẠM → DỪNG
+            // ================================
             function stopAutoScroll() {
+                if (!running) return;
+
                 running = false;
+
+                // Hủy animation đang chạy
+                cancelAnimationFrame(animationId);
             }
 
-            window.addEventListener(
-                "touchstart",
-                stopAutoScroll,
-                { once: true, passive: true }
-            );
+            window.addEventListener("touchstart", stopAutoScroll, {
+                passive: true
+            });
 
-            window.addEventListener(
-                "touchmove",
-                stopAutoScroll,
-                { once: true, passive: true }
-            );
+            window.addEventListener("touchmove", stopAutoScroll, {
+                passive: true
+            });
+
+            // Nếu người dùng kéo bằng chuột
+            window.addEventListener("mousedown", stopAutoScroll, {
+                passive: true
+            });
+
+            // ================================
+            // TỰ ĐỘNG CUỘN
+            // ================================
+            let animationId;
 
             function autoScroll(currentTime) {
 
@@ -1182,12 +1195,17 @@ if (window.innerWidth <= 768) {
                 );
 
                 if (progress < 1) {
-                    requestAnimationFrame(autoScroll);
+
+                    animationId =
+                        requestAnimationFrame(autoScroll);
+
                 }
 
             }
 
-            requestAnimationFrame(autoScroll);
+            // Bắt đầu tự cuộn
+            animationId =
+                requestAnimationFrame(autoScroll);
 
         }, 1000);
 
