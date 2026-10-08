@@ -3053,7 +3053,7 @@ select {
    ========================================================= */
 
 .guest-wishes {
-    position: absolute;
+    position: sticky;
 
     top: 58%;
     left: 50%;
@@ -3173,7 +3173,7 @@ select {
 
         top: 84%;
 
-        max-height: 150px;
+        max-height: 215px;
 
     }
 
