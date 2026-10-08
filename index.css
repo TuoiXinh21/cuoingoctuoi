@@ -1964,11 +1964,12 @@ body::before {
         width: 31px;
         height: 28px;
 
-        font-size: 13px;
+        font-size: 13px;s
     }
 
     .empty-message {
         font-size: 9px;
+        padding-top: 28px;
     }
 
     .gift-title {
