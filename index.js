@@ -1119,3 +1119,44 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+function saveQR(event) {
+    event.preventDefault();
+
+    const imageUrl = "anhcuoi/qr-1.jpg";
+
+    fetch(imageUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Không thể tải ảnh QR");
+            }
+
+            return response.blob();
+        })
+        .then(blob => {
+
+            const blobUrl = URL.createObjectURL(blob);
+
+            const link = document.createElement("a");
+
+            link.href = blobUrl;
+            link.download = "QR-Cua-Dau.jpg";
+
+            document.body.appendChild(link);
+
+            link.click();
+
+            document.body.removeChild(link);
+
+            URL.revokeObjectURL(blobUrl);
+        })
+        .catch(error => {
+
+            console.error(error);
+
+            // Nếu trình duyệt không cho tải trực tiếp
+            window.open(imageUrl, "_blank");
+
+            alert("Không thể tải tự động. Ảnh QR đã được mở, bạn hãy nhấn giữ ảnh để lưu.");
+        });
+}
