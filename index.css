@@ -1999,13 +1999,11 @@ body::before {
 }
 
 .title {
+    padding-top: 85px;
     margin: 0 0 7px;
-
     color: #75665e;
-
     font-size: 20px;
     font-weight: 600;
-
     letter-spacing: 0.5px;
 }
 
@@ -3173,7 +3171,7 @@ select {
 
         width: 48%;
 
-        top: 58%;
+        top: 84%;
 
         max-height: 150px;
 
