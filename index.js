@@ -1120,27 +1120,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-function saveQR(event) {
+function saveQR(event, imageUrl, fileName) {
     event.preventDefault();
 
-    const imageUrl = "anhcuoi/qr-1.jpg";
-
     fetch(imageUrl)
-        .then(response => {
+        .then(function(response) {
             if (!response.ok) {
                 throw new Error("Không thể tải ảnh QR");
             }
 
             return response.blob();
         })
-        .then(blob => {
+        .then(function(blob) {
 
             const blobUrl = URL.createObjectURL(blob);
 
             const link = document.createElement("a");
 
             link.href = blobUrl;
-            link.download = "QR-Cua-Dau.jpg";
+            link.download = fileName;
 
             document.body.appendChild(link);
 
@@ -1148,15 +1146,17 @@ function saveQR(event) {
 
             document.body.removeChild(link);
 
-            URL.revokeObjectURL(blobUrl);
+            setTimeout(function() {
+                URL.revokeObjectURL(blobUrl);
+            }, 1000);
+
         })
-        .catch(error => {
+        .catch(function(error) {
 
-            console.error(error);
+            console.error("Lỗi tải QR:", error);
 
-            // Nếu trình duyệt không cho tải trực tiếp
+            // Nếu trình duyệt điện thoại không cho tải trực tiếp
             window.open(imageUrl, "_blank");
 
-            alert("Không thể tải tự động. Ảnh QR đã được mở, bạn hãy nhấn giữ ảnh để lưu.");
         });
 }
