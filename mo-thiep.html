@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
+
+    <title>Đám Cưới Ngọc Tươi</title>
+
+    <!-- CSS TRANG MỞ THIỆP -->
+    <link rel="stylesheet" href="mo-thiep.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         MÀN HÌNH MỞ THIỆP
+    ====================================================== -->
+
+    <div
+        class="wedding-cover-screen"
+        id="weddingCover"
+    >
+
+        <div class="cover-card">
+
+            <!-- =================================================
+                 HOA BÊN TRÁI
+            ================================================== -->
+
+            <div class="cover-flower cover-flower-left">
+                <img
+                    src="anhcuoi/flower2-decoration.png"
+                    alt="Hoa trang trí bên trái"
+                >
+            </div>
+
+
+            <!-- =================================================
+                 HOA BÊN PHẢI
+            ================================================== -->
+
+            <div class="cover-flower cover-flower-right">
+                <img
+                    src="anhcuoi/flower2-decoration.png"
+                    alt="Hoa trang trí bên phải"
+                >
+            </div>
+
+
+            <!-- =================================================
+                 TRÁI TIM
+            ================================================== -->
+
+            <div class="cover-heart">
+                ♥
+            </div>
+
+
+            <!-- =================================================
+                 TÊN CÔ DÂU - CHÚ RỂ
+            ================================================== -->
+
+            <div class="cover-names">
+
+                <div class="cover-name">
+                    Xuân Ngọc
+                </div>
+
+                <span class="cover-and">
+                    &amp;
+                </span>
+
+                <div class="cover-name">
+                    Hồng Tươi
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ĐƯỜNG TRANG TRÍ
+            ================================================== -->
+
+            <div class="cover-line">
+
+                <span></span>
+
+                <i>♥</i>
+
+                <span></span>
+
+            </div>
+
+
+            <!-- =================================================
+                 NGÀY CƯỚI
+            ================================================== -->
+
+            <div class="cover-date">
+                25 tháng 10, 2026
+            </div>
+
+
+            <!-- =================================================
+                 LỜI MỜI
+            ================================================== -->
+
+            <div class="cover-invite">
+                Thân Mời
+            </div>
+
+
+            <!-- =================================================
+                 NÚT MỞ THIỆP
+            ================================================== -->
+
+            <button
+                type="button"
+                class="cover-open"
+                id="openWedding"
+            >
+                <span>Mở thiệp</span>
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         KHÔNG DÙNG ÂM THANH
+    ====================================================== -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const button = document.getElementById("openWedding");
+            const cover = document.getElementById("weddingCover");
+
+
+            /* Kiểm tra phần tử */
+            if (!button || !cover) {
+
+                console.error(
+                    "Không tìm thấy #openWedding hoặc #weddingCover"
+                );
+
+                return;
+            }
+
+
+            /* Khi bấm Mở thiệp */
+            button.addEventListener("click", function () {
+
+                /* Không cho bấm nhiều lần */
+                if (cover.classList.contains("opening")) {
+                    return;
+                }
+
+
+                /* Thêm class để CSS chạy animation */
+                cover.classList.add("opening");
+
+
+                /* Sau 2.5 giây chuyển sang trang chủ */
+                setTimeout(function () {
+
+                    window.location.href = "index.html";
+
+                }, 2000);
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
+

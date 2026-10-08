@@ -1,0 +1,3875 @@
+/* =========================================================
+   WEDDING PAGE - RESPONSIVE CSS
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Khu vực nền tối đa 800px */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 1000px;
+    max-width: 100%;
+    height: 100vh;
+
+    transform: translateX(-50%);
+
+    background-image: url("anhcuoi/paper.png");
+    background-repeat: repeat-y;
+    background-position: top center;
+    background-size: 100% auto;
+
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   WEDDING COVER
+   ========================================================= */
+
+.trang-wedding {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 55px 20px 100px !important;
+
+    overflow: hidden !important;
+
+    font-family:
+        "Times New Roman",
+        Times,
+        serif;
+}
+
+
+/* =========================================================
+   KHUNG NỘI DUNG CHÍNH
+   ========================================================= */
+
+.wedding-cover {
+    position: relative;
+
+    width: 100%;
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    background-image: url("anhcuoi/house-background.png");
+
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
+}
+
+
+/* Lớp làm nền nhạt */
+
+.wedding-cover::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+
+/* Nội dung nằm trên nền */
+
+.wedding-cover > * {
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   THE WEDDING OF
+   ========================================================= */
+
+.wedding-subtitle {
+    margin: 0 0 18px;
+
+    color: #81746d;
+
+    font-family:
+        "Times New Roman",
+        Times,
+        serif;
+
+    font-size: 12px;
+    font-weight: 400;
+
+    letter-spacing: 4px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   TÊN CÔ DÂU - CHÚ RỂ
+   ========================================================= */
+
+.wedding-names {
+    margin: 0 0 58px;
+
+    color: #81736c;
+
+    font-family:
+        "Times New Roman",
+        Times,
+        serif;
+
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    overflow-wrap: break-word;
+}
+
+.wedding-names span {
+    margin: 0 5px;
+
+    font-size: 34px;
+}
+
+
+/* =========================================================
+   KHU VỰC ẢNH CƯỚI
+   ========================================================= */
+
+.wedding-photo {
+    position: relative;
+
+    width: min(520px, 95%);
+    height: 700px;
+
+    margin: 0 auto;
+
+    overflow: visible !important;
+}
+
+
+/* =========================================================
+   BĂNG KEO
+   ========================================================= */
+
+.wedding-tape {
+    display: none !important;
+}
+
+
+/* =========================================================
+   ẢNH CƯỚI
+   ========================================================= */
+
+.wedding-photo .anh-cuoi {
+    position: absolute;
+    top: 50px;
+    left: 51%;
+    width: 320px;
+    height: 490px;
+    max-width: none;
+    object-fit: cover;
+    transform: translateX(-53%) rotate(-4deg);
+    z-index: 1;
+    margin: 0 !important;
+    box-shadow: none !important;
+}
+
+
+/* =========================================================
+   KHUNG POLAROID
+   ========================================================= */
+
+.wedding-photo .khung-anh {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 450px;
+    max-width: none;
+    height: auto;
+    transform: translateX(-49%) rotate(1deg);
+    z-index: 5;
+    margin: 0 !important;
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   THÔNG TIN LỄ CƯỚI
+   ========================================================= */
+
+.wedding-info {
+    position: relative;
+
+    width: min(450px, 92%);
+    min-height: 760px;
+
+    margin: 80px auto 100px;
+
+    padding: 38px 32px 45px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            rgba(249, 244, 236, 0.94),
+            rgba(246, 239, 229, 0.94)
+        ),
+        url("images/paper-texture.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 25px rgba(90, 70, 55, 0.14);
+
+    text-align: center;
+
+    color: #81736c;
+
+    font-family:
+        "Times New Roman",
+        Times,
+        serif;
+
+    overflow: hidden;
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   TIÊU ĐỀ THÔNG TIN
+   ========================================================= */
+
+.info-title {
+    margin: 0 0 28px;
+
+    color: #756860;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   THÔNG TIN GIA ĐÌNH
+   ========================================================= */
+
+.family-info {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    margin-bottom: 28px;
+}
+
+.family-side {
+    width: 47%;
+
+    text-align: center;
+
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.family-side .small-text {
+    margin-bottom: 5px;
+
+    color: #8e827b;
+
+    font-size: 10px;
+}
+
+.family-side strong {
+    display: block;
+
+    color: #756861;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    line-height: 1.55;
+}
+
+.family-side .address {
+    margin-top: 7px;
+
+    color: #958a83;
+
+    font-size: 8px;
+
+    line-height: 1.5;
+}
+
+.family-line {
+    width: 1px;
+    height: 70px;
+
+    flex-shrink: 0;
+
+    background: #bdb2aa;
+
+    opacity: 0.65;
+}
+
+
+/* =========================================================
+   LỜI MỜI
+   ========================================================= */
+
+.invitation-text {
+    margin: 0 0 30px;
+
+    color: #857a73;
+
+    font-size: 12px;
+    line-height: 1.8;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   TÊN CÔ DÂU
+   ========================================================= */
+
+.bride-name {
+    margin: 0 0 18px;
+
+    color: #796b64;
+
+    font-size: 36px;
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   VAI TRÒ
+   ========================================================= */
+
+.gender {
+    margin: 0 0 16px;
+
+    color: #a29891;
+
+    font-size: 8px;
+
+    letter-spacing: 2.5px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   &
+   ========================================================= */
+
+.and-symbol {
+    margin: 0 0 18px;
+
+    color: #8a7d75;
+
+    font-size: 29px;
+    font-style: italic;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   TÊN CHÚ RỂ
+   ========================================================= */
+
+.groom-name {
+    margin: 0 0 18px;
+
+    color: #796b64;
+
+    font-size: 36px;
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   THÔNG TIN LỄ
+   ========================================================= */
+
+.ceremony-text {
+    margin: 10px 0 14px;
+
+    color: #81756e;
+
+    font-size: 12px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   GIỜ
+   ========================================================= */
+
+.ceremony-time {
+    margin: 0 0 28px;
+
+    color: #776961;
+
+    font-size: 25px;
+    font-weight: 400;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   NGÀY
+   ========================================================= */
+
+.date-row {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-bottom: 16px;
+
+    color: #81756e;
+
+    font-size: 12px;
+
+    line-height: 1;
+}
+
+.date-row strong {
+    color: #796b64;
+
+    font-size: 32px;
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+.date-row i {
+    display: block;
+
+    width: 1px;
+    height: 20px;
+
+    flex-shrink: 0;
+
+    background: #c0b5ad;
+}
+
+
+/* =========================================================
+   NĂM
+   ========================================================= */
+
+.year {
+    margin: 0 0 20px;
+
+    color: #81746d;
+
+    font-size: 19px;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   ÂM LỊCH
+   ========================================================= */
+
+.lunar-date {
+    color: #8e837b;
+
+    font-size: 9px;
+
+    letter-spacing: 1.7px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   HOA THÔNG TIN
+   ========================================================= */
+
+.info-flower {
+    position: absolute;
+
+    z-index: 10;
+
+    pointer-events: none;
+}
+
+.info-flower img {
+    display: block;
+
+    width: 100% !important;
+    height: auto !important;
+
+    max-width: none !important;
+
+    margin: 0 !important;
+}
+
+.info-flower-left {
+    left: -48px;
+    bottom: 125px;
+    width: 135px;
+    transform: rotate(-8deg);
+
+    animation: flowerUpDown 3s ease-in-out infinite;
+}
+
+@keyframes flowerUpDown {
+    0% {
+        transform: translateY(0) rotate(-8deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(-8deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(-8deg);
+    }
+}
+
+.info-flower-right {
+    right: -50px;
+    bottom: -5px;
+    width: 145px;
+
+    animation: flowerRightFloat 3.5s ease-in-out infinite;
+}
+
+@keyframes flowerRightFloat {
+    0% {
+        transform: translateY(0) rotate(5deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(8deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(5deg);
+    }
+}
+
+
+/* =========================================================
+   ALBUM
+   ========================================================= */
+
+.wedding-album {
+    position: relative;
+
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 70px auto 110px;
+
+    text-align: center;
+
+    font-family:
+        "Times New Roman",
+        Times,
+        serif;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   TIÊU ĐỀ ALBUM
+   ========================================================= */
+
+.album-title {
+    margin: 0 0 35px;
+
+    color: #796c65;
+
+    font-size: 19px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   SLIDER
+   ========================================================= */
+
+.album-slider {
+    position: relative;
+
+    width: 100%;
+    height: 390px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    perspective: 1200px;
+
+    overflow: visible;
+}
+
+
+/* =========================================================
+   TRACK
+   ========================================================= */
+
+.album-track {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transform-style: preserve-3d;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.album-card {
+    position: absolute;
+
+    width: 255px;
+    height: 380px;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    background: #eee;
+
+    box-shadow:
+        0 10px 25px rgba(80, 65, 55, 0.15);
+
+    transition:
+        transform 0.6s ease,
+        opacity 0.6s ease,
+        filter 0.6s ease;
+
+    transform-style: preserve-3d;
+}
+
+.album-card img {
+    display: block;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    max-width: none !important;
+
+    object-fit: cover;
+
+    margin: 0 !important;
+}
+
+
+/* =========================================================
+   CARD ACTIVE
+   ========================================================= */
+
+.album-card.active {
+    z-index: 10;
+
+    opacity: 1;
+
+    transform:
+        translateX(0)
+        translateZ(100px)
+        scale(1);
+
+    filter: none;
+}
+
+
+/* =========================================================
+   LEFT 1
+   ========================================================= */
+
+.album-card.left-1 {
+    z-index: 6;
+
+    opacity: 0.9;
+
+    transform:
+        translateX(-210px)
+        translateZ(-40px)
+        rotateY(12deg)
+        scale(0.86);
+}
+
+
+/* =========================================================
+   LEFT 2
+   ========================================================= */
+
+.album-card.left-2 {
+    z-index: 4;
+
+    opacity: 0.45;
+
+    transform:
+        translateX(-370px)
+        translateZ(-120px)
+        rotateY(18deg)
+        scale(0.72);
+}
+
+
+/* =========================================================
+   RIGHT 1
+   ========================================================= */
+
+.album-card.right-1 {
+    z-index: 6;
+
+    opacity: 0.9;
+
+    transform:
+        translateX(210px)
+        translateZ(-40px)
+        rotateY(-12deg)
+        scale(0.86);
+}
+
+
+/* =========================================================
+   RIGHT 2
+   ========================================================= */
+
+.album-card.right-2 {
+    z-index: 4;
+
+    opacity: 0.45;
+
+    transform:
+        translateX(370px)
+        translateZ(-120px)
+        rotateY(-18deg)
+        scale(0.72);
+}
+
+
+/* =========================================================
+   HIDDEN
+   ========================================================= */
+
+.album-card.hidden {
+    opacity: 0;
+    pointer-events: none;
+
+    transform:
+        translateX(0)
+        translateZ(-300px)
+        scale(0.5);
+}
+
+
+/* =========================================================
+   NÚT ALBUM
+   ========================================================= */
+
+.album-btn {
+    position: absolute;
+
+    top: 50%;
+
+    width: 30px;
+    height: 30px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(90, 80, 72, 0.65);
+
+    color: #fff;
+
+    font-size: 24px;
+    line-height: 28px;
+
+    cursor: pointer;
+
+    z-index: 30;
+
+    transform: translateY(-50%);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.album-btn:hover {
+    background: rgba(70, 60, 52, 0.85);
+
+    transform:
+        translateY(-50%)
+        scale(1.1);
+}
+
+.album-prev {
+    left: calc(50% - 285px);
+}
+
+.album-next {
+    right: calc(50% - 285px);
+}
+
+
+/* =========================================================
+   DOTS
+   ========================================================= */
+
+.album-dots {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 45px;
+    margin-bottom: 10px;
+
+    min-height: 20px;
+}
+
+.album-dot {
+    width: 7px;
+    height: 7px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #d8cec5;
+
+    cursor: pointer;
+
+    transition:
+        width 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.album-dot.active {
+    width: 20px;
+    height: 7px;
+
+    border-radius: 10px;
+
+    background: #9a8b82;
+}
+
+
+/* =========================================================
+   THÔNG TIN TIỆC CƯỚI
+   ========================================================= */
+
+.wedding-party {
+    position: relative;
+
+    width: min(450px, 92%);
+    min-height: 765px;
+
+    margin: 90px auto 110px;
+
+    padding: 32px 30px 35px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            rgba(249, 244, 236, 0.94),
+            rgba(246, 239, 229, 0.94)
+        ),
+        url("images/paper-texture.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 8px 25px rgba(90, 70, 55, 0.14);
+
+    text-align: center;
+
+    color: #81736c;
+
+    font-family:
+        "Times New Roman",
+        Times,
+        serif;
+
+    overflow: hidden;
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   PARTY TITLE
+   ========================================================= */
+
+.party-title {
+    margin: 0 0 28px;
+
+    color: #776961;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+.party-intro {
+    margin: 0 0 25px;
+
+    color: #81736c;
+
+    font-size: 20px;
+
+    line-height: 1.4;
+}
+
+.party-time {
+    margin: 0 0 28px;
+
+    color: #81736c;
+
+    font-size: 25px;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   PARTY DATE
+   ========================================================= */
+
+.party-date {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+    color: #81736c;
+
+    font-size: 12px;
+}
+
+.party-date strong {
+    color: #796b64;
+
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.party-date i {
+    width: 1px;
+    height: 20px;
+
+    background: #bdb2aa;
+}
+
+.party-year {
+    margin: 0 0 22px;
+
+    color: #81746d;
+
+    font-size: 18px;
+}
+
+.party-lunar {
+    margin: 0 0 30px;
+
+    color: #8e837b;
+
+    font-size: 9px;
+
+    letter-spacing: 1.7px;
+}
+
+
+/* =========================================================
+   COUNTDOWN
+   ========================================================= */
+
+.countdown-title {
+    margin: 0 0 12px;
+
+    color: #81736c;
+
+    font-size: 11px;
+}
+
+.countdown {
+    margin: 0 0 28px;
+
+    color: #81736c;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   CALENDAR
+   ========================================================= */
+
+.wedding-calendar {
+    width: min(290px, 100%);
+
+    margin: 0 auto 27px;
+
+    padding: 16px 18px 18px;
+
+    box-sizing: border-box;
+
+    background: #827269;
+
+    border-radius: 8px;
+
+    color: #f5eee5;
+}
+
+.calendar-month {
+    margin: 0 0 15px;
+
+    color: #fff;
+
+    font-size: 15px;
+    font-style: italic;
+
+    line-height: 1.3;
+}
+
+.calendar-week {
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    padding-bottom: 7px;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.5);
+}
+
+.calendar-week span {
+    color: #e8ded5;
+
+    font-size: 8px;
+}
+
+.calendar-days {
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    row-gap: 9px;
+
+    margin-top: 10px;
+
+    align-items: center;
+}
+
+.calendar-days span {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 18px;
+
+    color: #f4ece3;
+
+    font-size: 9px;
+}
+
+.calendar-selected {
+    width: 20px;
+    height: 20px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background: #f7f2eb;
+
+    color: #827269 !important;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   PARTY BUTTON
+   ========================================================= */
+
+.add-calendar {
+    display: block;
+
+    width: fit-content;
+
+    margin: 0 auto 24px;
+
+    color: #81736c;
+
+    font-size: 10px;
+
+    text-decoration: underline;
+
+    cursor: pointer;
+}
+
+.add-calendar:hover {
+    color: #655850;
+}
+
+.confirm-attendance {
+    padding: 9px 20px;
+
+    border: none;
+    border-radius: 20px;
+
+    background: #827269;
+
+    color: #fff;
+
+    font-family:
+        "Times New Roman",
+        Times,
+        serif;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.confirm-attendance:hover {
+    background: #6f6159;
+
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   HOA PARTY
+   ========================================================= */
+
+.party-flower {
+    position: absolute;
+
+    z-index: 10;
+
+    pointer-events: none;
+}
+
+.party-flower img {
+    display: block;
+
+    width: 100% !important;
+    height: auto !important;
+
+    max-width: none !important;
+
+    margin: 0 !important;
+}
+
+.party-flower-left {
+    left: -45px;
+    bottom: -20px;
+    width: 155px;
+
+    animation: partyFlowerLeftFloat 3s ease-in-out infinite;
+}
+
+@keyframes partyFlowerLeftFloat {
+    0% {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(-8deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+}
+
+.party-flower-right {
+    right: -45px;
+    top: 120px;
+    width: 145px;
+
+    animation: partyFlowerRightFloat 3.5s ease-in-out infinite;
+}
+
+@keyframes partyFlowerRightFloat {
+    0% {
+        transform: translateY(0) rotate(8deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(5deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(8deg);
+    }
+}
+
+/* =========================================================
+   LOCATION
+   ========================================================= */
+
+.wedding-location {
+    width: 100%;
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    padding: 45px 20px 70px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    color: #796b63;
+}
+
+.location-title {
+    margin-bottom: 15px;
+}
+
+.location-title h2 {
+    margin: 0 0 8px;
+
+    color: #75665e;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.location-title p {
+    margin: 0;
+
+    color: #978b83;
+
+    font-size: 12px;
+}
+
+.map-wrapper {
+    width: min(500px, 100%);
+    height: 320px;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    border-radius: 9px;
+
+    box-shadow:
+        0 4px 15px rgba(90, 75, 65, 0.10);
+}
+
+.map-wrapper iframe {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
+
+.direction {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    margin-top: 17px;
+
+    padding: 5px 8px;
+
+    color: #8b7d75;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.direction-icon {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 13px;
+
+    color: #8b7d75;
+
+    transform: rotate(-35deg);
+
+    transition:
+        transform 0.3s ease;
+}
+
+.direction:hover {
+    color: #6f6159;
+
+    transform: translateY(-2px);
+}
+
+.direction:hover .direction-icon {
+    transform:
+        rotate(-35deg)
+        translate(2px, -2px);
+}
+
+
+/* =========================================================
+   DRESS CODE
+   ========================================================= */
+
+.dress-code {
+    margin-top: 65px;
+
+    text-align: center;
+
+    color: #796b63;
+}
+
+.dress-code h2 {
+    margin: 0 0 7px;
+
+    color: #75665e;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+}
+
+.dress-code p {
+    margin: 0;
+
+    color: #968981;
+
+    font-size: 13px;
+}
+
+.dress-colors {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 19px;
+
+    margin-top: 20px;
+}
+
+.color {
+    display: block;
+
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 2px 7px rgba(90, 75, 65, 0.12);
+
+    transition:
+        transform 0.3s ease;
+}
+
+.color:hover {
+    transform: translateY(-4px);
+}
+
+.color-white {
+    background: #ffffff;
+
+    border: 1px solid #eeeeee;
+}
+
+.color-green {
+    background: #aabd9f;
+}
+
+.color-pink {
+    background: #efbfd0;
+}
+
+/* =========================================================
+   GUESTBOOK
+   ========================================================= */
+
+.guestbook {
+    position: relative;
+
+    width: 100%;
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   GUESTBOOK IMAGE
+   ========================================================= */
+
+.guestbook-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   GUESTBOOK CONTENT
+   ========================================================= */
+
+.guestbook-content {
+    position: absolute;
+
+    top: 7.5%;
+    left: 50%;
+
+    width: 44%;
+
+    transform: translateX(-50%);
+
+    text-align: center;
+}
+
+.guestbook-content h2 {
+    margin: 0 0 24px;
+
+    color: #75665e;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 19px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   GUEST NAME
+   ========================================================= */
+
+.guest-name {
+    display: block;
+
+    width: 100%;
+    height: 41px;
+
+    box-sizing: border-box;
+
+    padding: 0 14px;
+
+    border: 1px solid #8c7b70;
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: #75665e;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 12px;
+
+    outline: none;
+
+    transition: border-color 0.25s ease;
+}
+
+.guest-name::placeholder {
+    color: #aa9c92;
+}
+
+.guest-name:focus {
+    border-color: #75665e;
+}
+
+
+/* =========================================================
+   GUEST MESSAGE
+   ========================================================= */
+
+.guest-message {
+    display: block;
+
+    width: 100%;
+    height: 135px;
+
+    margin-top: 15px;
+
+    box-sizing: border-box;
+
+    padding: 13px 14px;
+
+    resize: none;
+
+    border: 1px solid #8c7b70;
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: #75665e;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    outline: none;
+
+    transition: border-color 0.25s ease;
+}
+
+.guest-message::placeholder {
+    color: #aa9c92;
+}
+
+.guest-message:focus {
+    border-color: #75665e;
+}
+
+
+/* =========================================================
+   GUEST ACTIONS
+   ========================================================= */
+
+.guestbook-actions {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   EMOJI BUTTON
+   ========================================================= */
+
+.emoji-btn {
+    width: 34px;
+    height: 30px;
+
+    padding: 0;
+
+    flex-shrink: 0;
+
+    border: none;
+    border-radius: 7px;
+
+    background: rgba(210, 201, 190, 0.45);
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.emoji-btn:hover {
+    background: rgba(210, 201, 190, 0.7);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   SEND BUTTON
+   ========================================================= */
+
+.send-btn {
+    height: 33px;
+
+    padding: 0 23px;
+
+    border: none;
+    border-radius: 20px;
+
+    background: #806f65;
+
+    color: #fff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.send-btn:hover {
+    background: #6f5f56;
+
+    transform: translateY(-1px);
+}
+
+.send-btn:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.empty-message {
+    margin: 5px 0 0;
+
+    color: #91847c;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   DANH SÁCH LỜI CHÚC
+   ========================================================= */
+
+.guest-wishes {
+    position: relative;
+
+    width: 44%;
+
+    margin: 0 auto;
+
+    padding-top: 5px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TỪNG LỜI CHÚC
+   ========================================================= */
+
+.guest-wish {
+    padding: 12px 0;
+
+    border-bottom: 1px solid rgba(140, 123, 112, 0.35);
+
+    text-align: left;
+
+    color: #75665e;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+}
+
+.guest-wish-name {
+    margin: 0 0 5px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.guest-wish-message {
+    margin: 0;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    color: #85776e;
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   GIFT TITLE
+   ========================================================= */
+
+.gift-title {
+    position: absolute;
+
+    top: 49.5%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    margin: 0;
+
+    color: #75665e;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    letter-spacing: 0.7px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   OPEN GIFT
+   ========================================================= */
+
+.open-gift {
+    position: absolute;
+
+    top: 83.5%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 150px;
+    height: 40px;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.gift-text {
+    color: #75665e;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 12px;
+
+    transition: 0.25s ease;
+}
+
+.open-gift:hover .gift-text {
+    color: #554941;
+}
+
+
+/* =========================================================
+   THANK YOU
+   ========================================================= */
+
+.thank-you {
+    position: absolute;
+
+    bottom: 4.5%;
+    left: 50%;
+
+    width: 90%;
+
+    transform: translateX(-50%);
+
+    margin: 0;
+
+    text-align: center;
+
+    color: #85776e;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 600px) {
+
+    .guestbook-content {
+        width: 48%;
+    }
+
+    .guest-wishes {
+        width: 48%;
+    }
+
+    .guestbook-content h2 {
+        font-size: 17px;
+
+        margin-bottom: 18px;
+    }
+
+    .guest-name {
+        height: 37px;
+
+        font-size: 11px;
+    }
+
+    .guest-message {
+        height: 110px;
+
+        margin-top: 10px;
+
+        font-size: 11px;
+    }
+
+    .send-btn {
+        height: 31px;
+
+        padding: 0 16px;
+
+        font-size: 10px;
+    }
+
+    .emoji-btn {
+        width: 31px;
+        height: 28px;
+
+        font-size: 13px;
+    }
+
+    .empty-message {
+        font-size: 9px;
+    }
+
+    .gift-title {
+        font-size: 16px;
+    }
+
+    .gift-text {
+        font-size: 10px;
+    }
+
+    .thank-you {
+        font-size: 9px;
+    }
+}
+/* =========================================================
+   GIFT SECTION
+   ========================================================= */
+
+.gift-section {
+    width: 100%;
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    padding: 0 20px;
+
+    text-align: center;
+}
+
+.title {
+    margin: 0 0 7px;
+
+    color: #75665e;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+}
+
+.gift-description {
+    width: 100%;
+    max-width: 550px;
+
+    margin: 0 auto 35px;
+
+    color: #75665e;
+
+    line-height: 1.8;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   2 PHONG BÌ
+   ========================================================= */
+
+.gift-envelopes {
+    position: relative;
+
+    width: min(380px, 100%);
+    height: 300px;
+
+    margin: 0 auto;
+}
+
+.envelope {
+    position: absolute;
+
+    height: auto !important;
+
+    display: block;
+
+    object-fit: contain;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.envelope-back {
+    width: 190px !important;
+
+    top: 5px;
+    right: 0;
+
+    transform: rotate(13deg);
+
+    z-index: 1;
+}
+
+.envelope-front {
+    width: 260px !important;
+
+    left: 5px;
+    top: 55px;
+
+    transform: rotate(-7deg);
+
+    z-index: 2;
+}
+
+.gift-envelopes:hover .envelope-back {
+    transform:
+        rotate(16deg)
+        translate(5px, -5px);
+}
+
+.gift-envelopes:hover .envelope-front {
+    transform:
+        rotate(-9deg)
+        translate(-3px, -5px);
+}
+
+
+/* =========================================================
+   NHẤN ĐỂ MỞ
+   ========================================================= */
+
+.gift-open-area {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+
+    margin-top: 5px;
+
+    text-align: center;
+
+    z-index: 100;
+}
+
+.gift-open-text {
+    display: inline-block !important;
+
+    padding-top: 149px !important;
+
+    color: #75665e !important;
+
+    font-size: 14px !important;
+    font-weight: 500 !important;
+
+    letter-spacing: 2px;
+
+    line-height: 1.5;
+
+    cursor: pointer;
+
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    text-decoration: none;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+.gift-open-text::after {
+    content: "";
+
+    display: block;
+
+    width: 100%;
+    height: 1px;
+
+    margin-top: 3px;
+
+    background: #75665e;
+}
+
+.gift-open-text:hover {
+    opacity: 0.6 !important;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   QR POPUP
+   ========================================================= */
+
+.qr-popup {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px;
+
+    box-sizing: border-box;
+
+    z-index: 999999;
+}
+
+.qr-popup.active {
+    display: flex;
+}
+
+.qr-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    backdrop-filter: blur(2px);
+}
+
+
+/* =========================================================
+   QR MODAL
+   ========================================================= */
+
+.qr-modal {
+    position: relative;
+
+    width: min(520px, 100%);
+
+    max-height: calc(100vh - 30px);
+
+    overflow: hidden;
+    overflow-y: auto;
+
+    background: #fff8f4;
+
+    border-radius: 16px;
+
+    z-index: 2;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.25);
+
+    animation:
+        popupShow 0.3s ease;
+}
+
+
+/* =========================================================
+   QR HEADER
+   ========================================================= */
+
+.qr-header {
+    position: relative;
+
+    height: 64px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 55px 0 20px;
+
+    background: #806f65;
+
+    color: white;
+}
+
+.qr-title {
+    margin: 20px 0 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    text-align: center;
+}
+
+.gift-message {
+    margin: 30px 0 0;
+
+    color: #806f65;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   QR CLOSE
+   ========================================================= */
+
+.qr-close {
+    position: absolute;
+
+    top: 50%;
+    right: 10px;
+
+    transform: translateY(-50%);
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+
+    background: #181818;
+
+    color: white;
+
+    font-size: 25px;
+    font-weight: 300;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.qr-close:hover {
+    transform:
+        translateY(-50%)
+        scale(1.08);
+}
+
+
+/* =========================================================
+   QR BODY
+   ========================================================= */
+
+.qr-body {
+    min-height: 278px;
+
+    padding: 22px 20px 24px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+.qr-name {
+    margin: 0 0 12px;
+
+    color: #806f65;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   QR IMAGE
+   ========================================================= */
+
+.qr-image-box {
+    width: 172px;
+    height: 172px;
+
+    padding: 10px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.12);
+
+    flex-shrink: 0;
+}
+
+.qr-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   SAVE QR
+   ========================================================= */
+
+.save-qr {
+    margin-top: 8px;
+
+    padding: 6px 14px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: #eee7e2;
+
+    color: #806f65;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.save-qr:hover {
+    background: #e2d9d3;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   POPUP ANIMATION
+   ========================================================= */
+
+@keyframes popupShow {
+
+    from {
+        opacity: 0;
+
+        transform:
+            scale(0.90)
+            translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - ĐÃ ĐỒNG BỘ LẠI
+   Không để các breakpoint ghi đè vị trí ảnh lẫn nhau
+   ========================================================= */
+
+
+/* =========================================================
+   TABLET
+   601px - 900px
+   ========================================================= */
+
+@media screen and (max-width: 900px) {
+
+    .trang-wedding {
+        padding: 45px 15px 80px !important;
+    }
+
+    .album-card.left-2 {
+        transform:
+            translateX(-320px)
+            translateZ(-120px)
+            rotateY(18deg)
+            scale(0.68);
+    }
+
+    .album-card.right-2 {
+        transform:
+            translateX(320px)
+            translateZ(-120px)
+            rotateY(-18deg)
+            scale(0.68);
+    }
+
+    .album-prev {
+        left: 20px;
+    }
+
+    .album-next {
+        right: 20px;
+    }
+
+    .guestbook-content {
+        width: 48%;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   481px - 600px
+   ========================================================= */
+
+@media screen and (min-width: 481px) and (max-width: 600px) {
+
+    .trang-wedding {
+        padding: 40px 10px 70px !important;
+    }
+
+    .wedding-cover {
+        width: 100%;
+        background-size: 100% auto;
+    }
+
+    .wedding-subtitle {
+        margin-bottom: 15px;
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .wedding-names {
+        margin-bottom: 42px;
+        font-size: 30px;
+        line-height: 1.25;
+    }
+
+    .wedding-names span {
+        margin: 0 3px;
+        font-size: 25px;
+    }
+
+
+    /* =========================
+       KHUNG ẢNH CƯỚI
+       ========================= */
+
+    .wedding-photo {
+        position: relative;
+        width: 100%;
+        max-width: 430px;
+        height: 530px;
+        margin: 0 auto;
+        overflow: visible !important;
+    }
+
+    .wedding-photo .anh-cuoi {
+        position: absolute;
+
+        top: 38px;
+        left: 50%;
+
+        width: 61%;
+        height: auto;
+
+        aspect-ratio: 325 / 490;
+
+        object-fit: cover;
+
+        transform:
+            translateX(-50%)
+            rotate(-5deg);
+
+        margin: 0 !important;
+    }
+
+    .wedding-photo .khung-anh {
+        position: absolute;
+
+        top: 0;
+        left: 50%;
+
+        width: 76%;
+        height: auto;
+
+        transform:
+            translateX(-50%)
+            rotate(1deg);
+
+        margin: 0 !important;
+    }
+
+
+    /* =========================
+       ALBUM
+       ========================= */
+
+    .album-slider {
+        height: 340px;
+    }
+
+    .album-card {
+        width: 210px;
+        height: 315px;
+    }
+
+    .album-card.left-1 {
+        transform:
+            translateX(-150px)
+            translateZ(-40px)
+            rotateY(12deg)
+            scale(0.78);
+    }
+
+    .album-card.right-1 {
+        transform:
+            translateX(150px)
+            translateZ(-40px)
+            rotateY(-12deg)
+            scale(0.78);
+    }
+
+    .album-prev {
+        left: 12px;
+    }
+
+    .album-next {
+        right: 12px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   376px - 480px
+   Dùng chung một cách căn giữa
+   ========================================================= */
+
+@media screen and (min-width: 376px) and (max-width: 480px) {
+
+    .trang-wedding {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+
+    .wedding-cover {
+        width: 100%;
+    }
+
+    .wedding-names {
+        margin-bottom: 38px;
+        font-size: clamp(24px, 7vw, 29px);
+    }
+
+    .wedding-names span {
+        font-size: clamp(20px, 6vw, 24px);
+    }
+
+
+    /* =========================
+       KHUNG ẢNH
+       ========================= */
+
+    .wedding-photo {
+        position: relative;
+
+        width: 100%;
+        max-width: 410px;
+
+        height: 485px;
+
+        margin: 0 auto;
+
+        overflow: visible !important;
+    }
+
+    .wedding-photo .anh-cuoi {
+        position: absolute;
+        top: 34px;
+        left: 50%;
+        width: 58%;
+        height: auto;
+        aspect-ratio: 305 / 448;
+        object-fit: cover;
+        transform: translateX(-52%) rotate(-4deg);
+        margin: 0 !important;
+    }
+
+    .wedding-photo .khung-anh {
+        position: absolute;
+
+        top: 0;
+        left: 50%;
+
+        width: 78%;
+        height: auto;
+
+        transform:
+            translateX(-50%)
+            rotate(1deg);
+
+        margin: 0 !important;
+    }
+
+
+    /* =========================
+       THÔNG TIN
+       ========================= */
+
+    .wedding-info {
+        width: 92%;
+        min-height: 680px;
+
+        margin: 60px auto 80px;
+
+        padding: 30px 20px 35px;
+    }
+
+    .info-title {
+        font-size: 18px;
+    }
+
+    .family-side {
+        width: 46%;
+        font-size: 10px;
+    }
+
+    .family-side strong {
+        font-size: 11px;
+    }
+
+    .family-side .address {
+        font-size: 7px;
+    }
+
+    .invitation-text {
+        font-size: 10px;
+    }
+
+    .bride-name,
+    .groom-name {
+        font-size: 30px;
+    }
+
+    .ceremony-time {
+        font-size: 22px;
+    }
+
+    .date-row strong {
+        font-size: 28px;
+    }
+
+    .year {
+        font-size: 17px;
+    }
+
+    .lunar-date {
+        font-size: 8px;
+    }
+
+
+    /* =========================
+       ALBUM
+       ========================= */
+
+    .wedding-album {
+        width: 100%;
+        margin: 55px auto 80px;
+    }
+
+    .album-slider {
+        height: 340px;
+    }
+
+    .album-card {
+        width: 210px;
+        height: 315px;
+    }
+
+    .album-card.left-1 {
+        transform:
+            translateX(-150px)
+            translateZ(-40px)
+            rotateY(12deg)
+            scale(0.78);
+    }
+
+    .album-card.right-1 {
+        transform:
+            translateX(150px)
+            translateZ(-40px)
+            rotateY(-12deg)
+            scale(0.78);
+    }
+
+    .album-card.left-2,
+    .album-card.right-2 {
+        opacity: 0.2;
+    }
+
+    .album-prev {
+        left: 10px;
+    }
+
+    .album-next {
+        right: 10px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   321px - 375px
+   ========================================================= */
+
+@media screen and (min-width: 321px) and (max-width: 375px) {
+
+    .trang-wedding {
+        padding-left: 7px !important;
+        padding-right: 7px !important;
+    }
+
+    .wedding-names {
+        margin-bottom: 36px;
+        font-size: 23px;
+    }
+
+    .wedding-names span {
+        font-size: 20px;
+    }
+
+
+    /* =========================
+       KHUNG ẢNH
+       ========================= */
+
+    .wedding-photo {
+        position: relative;
+
+        width: 100%;
+        max-width: 365px;
+
+        height: 450px;
+
+        margin: 0 auto;
+
+        overflow: visible !important;
+    }
+
+    .wedding-photo .anh-cuoi {
+        position: absolute;
+
+        top: 31px;
+        left: 50%;
+
+        width: 58%;
+        height: auto;
+
+        aspect-ratio: 325 / 490;
+
+        object-fit: cover;
+
+        transform:
+            translateX(-50%)
+            rotate(-5deg);
+
+        margin: 0 !important;
+    }
+
+    .wedding-photo .khung-anh {
+        position: absolute;
+
+        top: 0;
+        left: 50%;
+
+        width: 81%;
+        height: auto;
+
+        transform:
+            translateX(-50%)
+            rotate(1deg);
+
+        margin: 0 !important;
+    }
+
+
+    /* =========================
+       ALBUM
+       ========================= */
+
+    .album-card {
+        width: 185px;
+        height: 278px;
+    }
+
+    .album-card.left-1 {
+        transform:
+            translateX(-105px)
+            translateZ(-40px)
+            scale(0.70);
+    }
+
+    .album-card.right-1 {
+        transform:
+            translateX(105px)
+            translateZ(-40px)
+            scale(0.70);
+    }
+
+    .album-card.left-2,
+    .album-card.right-2 {
+        opacity: 0;
+    }
+
+    .album-prev {
+        left: 6px;
+    }
+
+    .album-next {
+        right: 6px;
+    }
+}
+
+
+/* =========================================================
+   ĐIỆN THOẠI NHỎ
+   <= 320px
+   ========================================================= */
+
+@media screen and (max-width: 320px) {
+
+    .trang-wedding {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+
+    .wedding-subtitle {
+        font-size: 9px;
+        letter-spacing: 2.5px;
+    }
+
+    .wedding-names {
+        font-size: 21px;
+        margin-bottom: 32px;
+    }
+
+    .wedding-names span {
+        font-size: 18px;
+    }
+
+
+    /* =========================
+       KHUNG ẢNH
+       ========================= */
+
+    .wedding-photo {
+        position: relative;
+
+        width: 100%;
+        max-width: 315px;
+
+        height: 410px;
+
+        margin: 0 auto;
+
+        overflow: visible !important;
+    }
+
+    .wedding-photo .anh-cuoi {
+        position: absolute;
+
+        top: 29px;
+        left: 50%;
+
+        width: 60%;
+        height: auto;
+
+        aspect-ratio: 327 / 486;
+
+        object-fit: cover;
+
+        transform:
+            translateX(-50%)
+            rotate(-4deg);
+
+        margin: 0 !important;
+    }
+
+    .wedding-photo .khung-anh {
+        position: absolute;
+
+        top: 0;
+        left: 50%;
+
+        width: 82%;
+        height: auto;
+
+        transform:
+            translateX(-50%)
+            rotate(1deg);
+
+        margin: 0 !important;
+    }
+
+
+    /* =========================
+       ALBUM
+       ========================= */
+
+    .album-card {
+        width: 165px;
+        height: 248px;
+    }
+
+    .album-card.left-1 {
+        transform:
+            translateX(-90px)
+            translateZ(-40px)
+            scale(0.68);
+    }
+
+    .album-card.right-1 {
+        transform:
+            translateX(90px)
+            translateZ(-40px)
+            scale(0.68);
+    }
+
+    .album-card.left-2,
+    .album-card.right-2 {
+        opacity: 0;
+    }
+
+    .album-prev {
+        left: 5px;
+    }
+
+    .album-next {
+        right: 5px;
+    }
+}
+
+
+/* =========================================================
+   CHỐNG TRÀN NGANG
+   ========================================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img,
+iframe,
+video {
+    max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   DANH SÁCH LỜI CHÚC
+   ========================================================= */
+
+.guest-wishes {
+    position: absolute;
+
+    top: 58%;
+    left: 50%;
+
+    width: 44%;
+
+    transform: translateX(-50%);
+
+    max-height: 180px;
+
+    overflow-y: auto;
+
+    padding: 5px 8px;
+
+    box-sizing: border-box;
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   TỪNG LỜI CHÚC
+   ========================================================= */
+
+.guest-wish {
+
+    width: 100%;
+
+    margin-bottom: 10px;
+
+    padding: 10px 12px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(140, 123, 112, 0.45);
+
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.25);
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   TÊN KHÁCH
+   ========================================================= */
+
+.guest-wish-name {
+
+    margin: 0 0 5px;
+
+    color: #75665e;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   NỘI DUNG LỜI CHÚC
+   ========================================================= */
+
+.guest-wish-message {
+
+    margin: 0;
+
+    color: #85776e;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   THANH CUỘN
+   ========================================================= */
+
+.guest-wishes::-webkit-scrollbar {
+    width: 4px;
+}
+
+.guest-wishes::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.guest-wishes::-webkit-scrollbar-thumb {
+    background: rgba(117, 102, 94, 0.45);
+
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    .guest-wishes {
+
+        width: 48%;
+
+        top: 58%;
+
+        max-height: 150px;
+
+    }
+
+    .guest-wish {
+
+        padding: 8px 10px;
+
+        margin-bottom: 8px;
+
+    }
+
+    .guest-wish-name {
+
+        font-size: 10px;
+
+    }
+
+    .guest-wish-message {
+
+        font-size: 9px;
+
+        line-height: 1.4;
+
+    }
+
+}
+
+
+/* =========================================================
+   ĐIỆN THOẠI NHỎ
+   ========================================================= */
+
+@media screen and (max-width: 425px) {
+
+    .guest-wishes {
+
+        width: 49%;
+
+        top: 58%;
+
+        max-height: 125px;
+
+    }
+
+    .guest-wish {
+
+        padding: 7px 8px;
+
+    }
+
+    .guest-wish-name {
+
+        font-size: 9px;
+
+    }
+
+    .guest-wish-message {
+
+        font-size: 8px;
+
+    }
+
+}
+
+
+/* =========================================================
+   ĐIỆN THOẠI RẤT NHỎ
+   ========================================================= */
+
+@media screen and (max-width: 375px) {
+
+    .guest-wishes {
+
+        width: 50%;
+
+        top: 58%;
+
+        max-height: 110px;
+
+    }
+
+    .guest-wish-name {
+
+        font-size: 8px;
+
+    }
+
+    .guest-wish-message {
+
+        font-size: 7.5px;
+
+    }
+
+}
+
+
+/* =========================================================
+   POPUP XÁC NHẬN THAM DỰ
+   ========================================================= */
+
+.attendance-popup {
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+}
+
+
+/* =========================================================
+   KHI POPUP ĐƯỢC MỞ
+   ========================================================= */
+
+.attendance-popup.active {
+    display: flex;
+}
+
+
+/* =========================================================
+   NỀN TỐI
+   ========================================================= */
+
+.attendance-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    backdrop-filter: blur(3px);
+}
+
+
+/* =========================================================
+   KHUNG POPUP
+   ========================================================= */
+
+.attendance-box {
+    position: relative;
+
+    z-index: 2;
+
+    width: 90%;
+    max-width: 390px;
+
+    padding: 30px 25px;
+
+    box-sizing: border-box;
+
+    background: #fdfaf6;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 15px 50px rgba(0, 0, 0, 0.2);
+
+    text-align: center;
+
+    animation: attendancePopupShow 0.35s ease;
+}
+
+
+/* =========================================================
+   HIỆU ỨNG MỞ POPUP
+   ========================================================= */
+
+@keyframes attendancePopupShow {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(20px)
+            scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   NÚT ĐÓNG
+   ========================================================= */
+
+.attendance-close {
+    position: absolute;
+
+    top: 10px;
+    right: 12px;
+
+    width: 30px;
+    height: 30px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #75665e;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 25px;
+
+    font-weight: 300;
+
+    line-height: 30px;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+
+.attendance-close:hover {
+    color: #4f433d;
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   TIÊU ĐỀ
+   ========================================================= */
+
+.attendance-box h2 {
+
+    margin: 5px 0 8px;
+
+    color: #75665e;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   DÒNG PHỤ
+   ========================================================= */
+
+.attendance-subtitle {
+
+    margin: 0 0 22px;
+
+    color: #9a8b82;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   INPUT
+   ========================================================= */
+
+.attendance-input {
+
+    width: 100%;
+
+    height: 42px;
+
+    margin-bottom: 13px;
+
+    padding: 0 13px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #c8bbb2;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #75665e;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 12px;
+}
+
+
+.attendance-input::placeholder {
+
+    color: #aa9c92;
+
+}
+
+
+.attendance-input:focus {
+
+    border-color: #806f65;
+
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.attendance-label {
+
+    margin: 4px 0 8px;
+
+    color: #75665e;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 11px;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   LỰA CHỌN THAM DỰ
+   ========================================================= */
+
+.attendance-options {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+
+    margin-bottom: 20px;
+
+    text-align: left;
+}
+
+
+.attendance-options label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #75665e;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+
+.attendance-options input {
+
+    width: 14px;
+
+    height: 14px;
+
+    margin: 0;
+
+    accent-color: #806f65;
+
+}
+
+
+/* =========================================================
+   NÚT XÁC NHẬN
+   ========================================================= */
+
+.attendance-submit {
+
+    width: 100%;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    background: #806f65;
+
+    color: #fff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+
+.attendance-submit:hover {
+
+    background: #6f5f56;
+
+    transform: translateY(-1px);
+
+}
+
+
+/* =========================================================
+   THÔNG BÁO
+   ========================================================= */
+
+.attendance-status {
+
+    min-height: 16px;
+
+    margin: 12px 0 0;
+
+    color: #806f65;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 425px) {
+
+    .attendance-box {
+
+        width: 88%;
+
+        padding: 27px 20px;
+
+        border-radius: 12px;
+
+    }
+
+
+    .attendance-box h2 {
+
+        font-size: 18px;
+
+    }
+
+
+    .attendance-subtitle {
+
+        font-size: 11px;
+
+        margin-bottom: 18px;
+
+    }
+
+
+    .attendance-input {
+
+        height: 40px;
+
+        font-size: 11px;
+
+    }
+
+
+    .attendance-label {
+
+        font-size: 10px;
+
+    }
+
+
+    .attendance-options label {
+
+        font-size: 10px;
+
+    }
+
+
+    .attendance-submit {
+
+        height: 38px;
+
+        font-size: 11px;
+
+    }
+
+}
+
+/* =========================================================
+   NÚT THÊM VÀO LỊCH
+========================================================= */
+
+.calendar-buttons {
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.add-calendar {
+    width: 145px;
+    min-height: 58px;
+    padding: 8px 10px;
+    box-sizing: border-box;
+
+    border: 1px solid #b9aaa0;
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.35);
+
+    color: #75665e;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.add-calendar span {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 14px;
+}
+
+.add-calendar strong {
+    display: block;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 0.3px;
+}
+
+.add-calendar small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #9a8b82;
+
+    font-size: 9px;
+}
+
+.add-calendar:hover {
+    background: rgba(128, 111, 101, 0.12);
+    border-color: #806f65;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media screen and (max-width: 425px) {
+
+    .calendar-buttons {
+        gap: 8px;
+    }
+
+    .add-calendar {
+        width: 130px;
+        min-height: 54px;
+        padding: 7px 6px;
+    }
+
+    .add-calendar strong {
+        font-size: 9px;
+    }
+
+    .add-calendar small {
+        font-size: 8px;
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+
+    .calendar-buttons {
+        gap: 6px;
+    }
+
+    .add-calendar {
+        width: 120px;
+        min-height: 52px;
+    }
+
+    .add-calendar strong {
+        font-size: 8px;
+    }
+}
+
+/* =========================================================
+   NÚT NHẠC
+========================================================= */
+
+.music-button {
+    position: fixed;
+
+    right: 18px;
+    bottom: 18px;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #806f65;
+
+    color: #ffffff;
+
+    font-size: 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 99999;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.22);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+.music-button:hover {
+    transform: scale(1.08);
+    background: #6f5e55;
+}
+
+
+/* ĐIỆN THOẠI */
+
+@media screen and (max-width: 425px) {
+
+    .music-button {
+        right: 14px;
+        bottom: 14px;
+
+        width: 40px;
+        height: 40px;
+
+        font-size: 16px;
+    }
+
+}
