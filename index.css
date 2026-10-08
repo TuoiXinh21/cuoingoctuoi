@@ -2341,7 +2341,6 @@ body::before {
 
 .qr-item {
     width: 172px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
