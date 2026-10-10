@@ -1160,3 +1160,78 @@ function saveQR(event, imageUrl, fileName) {
 
         });
 }
+
+
+
+/* =========================================================
+   BẤM ẢNH ALBUM ĐỂ XEM PHÓNG TO
+========================================================= */
+
+const albumLightbox = document.getElementById("albumLightbox");
+const albumLightboxImage = document.getElementById("albumLightboxImage");
+const albumLightboxClose = document.getElementById("albumLightboxClose");
+
+// Bấm vào ảnh trong album để mở ảnh lớn
+albumCards.forEach(function (card) {
+
+    const img = card.querySelector("img");
+
+    if (!img) return;
+
+    img.addEventListener("click", function () {
+
+        if (!albumLightbox || !albumLightboxImage) return;
+
+        albumLightboxImage.src = img.currentSrc || img.src;
+        albumLightboxImage.alt = img.alt || "Ảnh cưới";
+
+        albumLightbox.classList.add("show");
+        document.body.style.overflow = "hidden";
+
+    });
+
+});
+
+// Hàm đóng ảnh
+function closeAlbumLightbox() {
+
+    if (!albumLightbox) return;
+
+    albumLightbox.classList.remove("show");
+    document.body.style.overflow = "";
+
+}
+
+// Bấm nút X để đóng
+if (albumLightboxClose) {
+
+    albumLightboxClose.addEventListener("click", function (event) {
+
+        event.stopPropagation();
+        closeAlbumLightbox();
+
+    });
+
+}
+
+// Bấm vùng nền tối để đóng
+if (albumLightbox) {
+
+    albumLightbox.addEventListener("click", function (event) {
+
+        if (event.target === albumLightbox) {
+            closeAlbumLightbox();
+        }
+
+    });
+
+}
+
+// Nhấn ESC để đóng
+document.addEventListener("keydown", function (event) {
+
+    if (event.key === "Escape") {
+        closeAlbumLightbox();
+    }
+
+});

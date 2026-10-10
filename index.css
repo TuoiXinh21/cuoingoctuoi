@@ -3921,3 +3921,139 @@ select {
     }
 
 }
+
+/* =========================================================
+   XEM ẢNH ALBUM PHÓNG TO
+========================================================= */
+
+/* Con trỏ khi bấm ảnh */
+.album-card img {
+    cursor: zoom-in;
+}
+
+/* Nền tối toàn màn hình */
+.album-lightbox {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.9);
+
+    z-index: 999999;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+/* Khi mở ảnh */
+.album-lightbox.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    cursor: zoom-out;
+}
+
+/* Ảnh phóng to */
+.album-lightbox img {
+    display: block;
+
+    width: auto !important;
+    height: auto !important;
+
+    max-width: 95vw !important;
+    max-height: 90vh !important;
+
+    object-fit: contain;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: none !important;
+    border-radius: 5px;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+
+    transform: scale(0.8);
+
+    transition: transform 0.3s ease;
+}
+
+/* Hiệu ứng phóng to */
+.album-lightbox.show img {
+    transform: scale(1);
+}
+
+/* Nút đóng X */
+.album-lightbox-close {
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    transition: background 0.3s ease;
+}
+
+.album-lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Giao diện điện thoại */
+@media screen and (max-width: 600px) {
+
+    .album-lightbox {
+        padding: 10px;
+    }
+
+    .album-lightbox img {
+        max-width: 96vw !important;
+        max-height: 85vh !important;
+    }
+
+    .album-lightbox-close {
+        top: 12px;
+        right: 12px;
+
+        width: 38px;
+        height: 38px;
+
+        font-size: 27px;
+    }
+}
+
